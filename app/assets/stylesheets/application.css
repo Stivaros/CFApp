@@ -13,3 +13,69 @@
  *= require_tree .
  *= require_self
  */
+
+/* Sticky Header and Footer Styles */
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+body {
+  padding-top: 50px;
+  margin-bottom: 300px;
+}
+
+.footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  /* Set the fixed height of the footer here */
+  height: 300px;
+  background-color: #0E1116;
+  color: #CB9CF2;
+  clip-path: polygon(
+    0 3vw,
+    100% 0,
+    100% 100%,
+    0 100%
+  );
+}
+.footer-container {
+    padding-top: 3vw;
+}
+
+/* Bootstrap Navigation Overwrite */
+
+@media (min-width: 768px) {
+    .navbar .navbar-nav {
+        display: inline-block;
+        float: none;
+        vertical-align: top;
+    }
+
+    .navbar .navbar-collapse {
+        text-align: center;
+    }
+}
+
+.navbar {
+    border: none;
+}
+
+.navbar-default {
+    background-color: #0E1116;
+}
+
+/* Header */
+
+.header {
+  background-color: #0E1116;
+  clip-path: polygon(
+    0 0,
+    100% 0,
+    100% calc(100% - 3vw),
+    0 100%
+  );
+  min-height: 100px;
+  padding-bottom: 3vw;
+}
