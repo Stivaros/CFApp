@@ -33,8 +33,8 @@
   </nav>
   <header class="header">
     <div class="container">
-      <h1>Page Titles to go Here</h1>
-      <p>Page description or subheading to go here</p>
+      <h1><%= yield(:page_header) %></h1>
+      <p><%= yield(:page_description) %></p>
     </div>
   </header>
   <%= yield %>

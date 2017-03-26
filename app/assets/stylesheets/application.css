@@ -79,3 +79,12 @@ body {
   min-height: 100px;
   padding-bottom: 3vw;
 }
+
+.header h1 {
+  color: #CB9CF2;
+}
+
+.header p {
+  color: #9E7B9B;
+  font-size: 2em;
+}
