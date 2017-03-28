@@ -13,6 +13,12 @@
  *= require_tree .
  *= require_self
  */
+ 
+ /* Global Styles */
+ 
+ p {
+   color: #0E1116;
+ }
 
 /* Sticky Header and Footer Styles */
 
@@ -22,7 +28,7 @@ html {
 }
 body {
   padding-top: 50px;
-  margin-bottom: 300px;
+  margin-bottom: 350px;
 }
 
 .footer {
@@ -31,8 +37,8 @@ body {
   width: 100%;
   /* Set the fixed height of the footer here */
   height: 300px;
-  background-color: #0E1116;
-  color: #CB9CF2;
+  background-color: #CB9CF2;
+  color: #616283;
   clip-path: polygon(
     0 3vw,
     100% 0,
@@ -41,7 +47,7 @@ body {
   );
 }
 .footer-container {
-    padding-top: 3vw;
+    padding-top: 6vw;
 }
 
 /* Bootstrap Navigation Overwrite */
@@ -63,13 +69,13 @@ body {
 }
 
 .navbar-default {
-    background-color: #0E1116;
+    background-color: #CB9CF2;
 }
 
 /* Header */
 
 .header {
-  background-color: #0E1116;
+  background-color: #CB9CF2;
   clip-path: polygon(
     0 0,
     100% 0,
@@ -78,13 +84,20 @@ body {
   );
   min-height: 100px;
   padding-bottom: 3vw;
+  margin-bottom: 3vw;
 }
 
 .header h1 {
-  color: #CB9CF2;
+  color: #374A67;
 }
 
 .header p {
-  color: #9E7B9B;
+  color: #616283;
   font-size: 2em;
+}
+
+/* Footer */
+
+.footer p {
+  color: #374A67;
 }
