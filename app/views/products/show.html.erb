@@ -1,0 +1,22 @@
+<% content_for :page_header, @product.name %>
+<% content_for :page_description, @product.description %>
+<p id="notice"><%= notice %></p>
+<div class="container">
+  <p>
+    <strong>Name:</strong>
+    <%= @product.name %>
+  </p>
+  
+  <p>
+    <strong>Description:</strong>
+    <%= @product.description %>
+  </p>
+  
+  <p>
+    <strong>Image url:</strong>
+    <%= @product.image_url %>
+  </p>
+  
+  <%= button_to 'Edit', edit_product_path(@product), class: 'btn btn-warning' %> |
+  <%= button_to 'Back', products_path, class: 'btn btn-danger' %>
+</div>
