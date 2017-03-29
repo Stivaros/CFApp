@@ -1,5 +1,6 @@
-<h1>New Product</h1>
+<% content_for :page_header, "New Product" %>
+<% content_for :page_description, "Add a new product to the database" %>
 
 <%= render 'form', product: @product %>
 
-<%= link_to 'Back', products_path %>
+<%= link_to 'Back', products_path, class: 'btn btn-primary' %>

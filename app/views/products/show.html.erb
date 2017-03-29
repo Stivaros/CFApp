@@ -17,6 +17,6 @@
     <%= @product.image_url %>
   </p>
   
-  <%= button_to 'Edit', edit_product_path(@product), class: 'btn btn-warning' %> |
-  <%= button_to 'Back', products_path, class: 'btn btn-danger' %>
+  <%= link_to 'Edit', edit_product_path(@product), class: 'btn btn-warning' %> |
+  <%= link_to 'Back', products_path, class: 'btn btn-danger' %>
 </div>
