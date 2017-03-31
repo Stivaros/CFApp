@@ -38,7 +38,9 @@
       <p><%= yield(:page_description) %></p>
     </div>
   </header>
-  <%= yield %>
+  <div class="container">
+    <%= yield %>
+  </div>
   <footer class="footer">
     <div class="container footer-container">
       <p>&copy; <%= Time.current.year %> Efstathios Stivaros</p>
