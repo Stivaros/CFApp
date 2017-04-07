@@ -1,0 +1,8 @@
+<% content_for :page_header, "Orders" %>
+<% content_for :page_description, "Your Orders" %>
+
+<div class="row">
+  <%= render @orders %>
+</div>
+
+<%= link_to 'New Order', new_order_path, class: 'btn btn-primary' %>

@@ -1,0 +1,7 @@
+<% content_for :page_header, "Edit Order" %>
+<% content_for :page_description, "Use this form to edit an order" %>
+
+<%= render 'form', order: @order %>
+
+<%= link_to 'Show', @order %> |
+<%= link_to 'Back', orders_path %>

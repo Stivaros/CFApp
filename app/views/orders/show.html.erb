@@ -1,0 +1,25 @@
+<% content_for :page_header, "Order #{@order.id}" %>
+<% content_for :page_description, "Breakdown of order #{@order.id}" %>
+<p id="notice"><%= notice %></p>
+<p>
+  <strong>Order Number:</strong>
+  <%= @order.id %>
+</p>
+
+<p>
+  <strong>User ID:</strong>
+  <%= @order.user_id %>
+</p>
+
+<p>
+  <strong>Product ID:</strong>
+  <%= @order.product_id %>
+</p>
+
+<p>
+  <strong>Total:</strong>
+  <%= @order.total %>
+</p>
+
+<%= link_to 'Edit', edit_order_path(@order), class: 'btn btn-warning' %> |
+<%= link_to 'Back', orders_path, class: 'btn btn-danger' %>

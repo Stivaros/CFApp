@@ -1,0 +1,6 @@
+<% content_for :page_header, "New Order" %>
+<% content_for :page_description, "Generate a new order" %>
+
+<%= render 'form', order: @order %>
+
+<%= link_to 'Back', orders_path, class: 'btn btn-default' %>
