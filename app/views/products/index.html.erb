@@ -1,11 +1,8 @@
 <% content_for :page_header, "Products" %>
 <% content_for :page_description, "Our SEO packages and services" %>
 <p id="notice"><%= notice %></p>
-
-<div class="row">
-  <%= render @products %>
+<div class="row product-spacer">
+  <%= link_to 'New Product', new_product_path, class: 'btn btn-primary btn-lg pull-right' %>
 </div>
 
-<br>
-
-<%= link_to 'New Product', new_product_path, class: 'btn btn-primary' %>
+<%= render 'product' %>
