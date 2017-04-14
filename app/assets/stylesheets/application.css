@@ -18,6 +18,7 @@
  
  p {
    color: #0E1116;
+   font-size: 1.5em;
  }
 
 /* Sticky Header and Footer Styles */
@@ -100,4 +101,5 @@ body {
 
 .footer p {
   color: #374A67;
+  font-size: 1.25em;
 }
