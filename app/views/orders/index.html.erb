@@ -1,8 +1,9 @@
 <% content_for :page_header, "Orders" %>
 <% content_for :page_description, "Your Orders" %>
-
+<p id="notice"><%= notice %></p>
+<div class="row order-spacer">
+  <%= link_to 'New Order', new_order_path, class: 'btn btn-primary btn-lg pull-right' %>
+</div>
 <div class="row">
   <%= render @orders %>
 </div>
-
-<%= link_to 'New Order', new_order_path, class: 'btn btn-primary' %>

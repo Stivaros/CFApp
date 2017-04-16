@@ -32,7 +32,6 @@ This repo hosts my CF course RoR app. It is an ecommerce store for SEO products.
 
 ### Orders
 
-- [ ] Move "New Order" button to top right, similar to Products index view.
-- [ ] Carousel text styling.
-- [ ] Line break between "Create Order" and "Back" buttons.
-- [ ] Create product dropdown in the order menu using "select".
+- [x] Move "New Order" button to top right, similar to Products index view.
+- [x] Line break between "Create Order" and "Back" buttons.
+- [x] Create product dropdown in the order menu using "select".
