@@ -2,13 +2,13 @@
   <div class="row data-api-items">
     <% products.each do |product| %>
       <div class="col-md-4" data-mh="each-product">
-      <%= image_tag(product.image_url, class: 'img-responsive', data: {mh: 'product-image'}) %>
-      <%= link_to product.name, product, class: 'h2', data: {mh: 'product-name'} %>
-      <p data-mh="product-description"><%= product.description %></p>
-      <p data-mh="product-tier"><%= product.tier %></p>
-      <p class="product-price" data-mh="product-price">£ <%= product.price %></p>
-      <p><%= link_to 'Show', product, class: 'btn btn-primary' %> <%= link_to 'Edit', edit_product_path(product), class: 'btn btn-warning' %> <%= link_to 'Destroy', product, method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-danger' %></p>
-    </div>
+        <%= image_tag(product.image_url, class: 'img-responsive', data: {mh: 'product-image'}) %>
+        <%= link_to product.name, product, class: 'h2', data: {mh: 'product-name'} %>
+        <p data-mh="product-description"><%= product.description %></p>
+        <p data-mh="product-tier"><%= product.tier %></p>
+        <p class="product-price" data-mh="product-price">£ <%= product.price %></p>
+        <p><%= link_to 'Show', product, class: 'btn btn-primary' %> <%= link_to 'Edit', edit_product_path(product), class: 'btn btn-warning' %> <%= link_to 'Destroy', product, method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-danger' %></p>
+      </div>
     <% end %>
   </div>
 <% end %>
