@@ -13,7 +13,7 @@ This repo hosts my CF course RoR app. It is an ecommerce store for SEO products.
 
 ### Global
 
-- [ ] Push nav items to right margin.
+- [x] Push nav items to right margin.
 - [ ] Update navigation link colour.
 - [ ] Footer links to Github and social media.
 
