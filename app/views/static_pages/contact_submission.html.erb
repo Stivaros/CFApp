@@ -1,0 +1,9 @@
+<% content_for :page_header, "Thank You" %>
+<% content_for :page_description, "Your message has successfully been sent" %>
+
+<p>Thank you for contacting us. Your message has has been sent to us and we will respond as soon as possible. In the meanwhile, please use the links below to continue browsing the site.</p>
+
+<div class="btn-group increase-margin-top" role="group" aria-label="contact-return">
+  <%= link_to 'Back to Contact', :back, class: 'btn btn-default' %>
+  <%= link_to 'Home', root_path, class: 'btn btn-default' %>
+</div>

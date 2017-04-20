@@ -8,6 +8,8 @@ Rails.application.routes.draw do
 
   get '/contact' => 'static_pages#contact'
 
+  post 'static_pages/contact_submission'
+
   get '/index' => 'static_pages#index'
 
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
