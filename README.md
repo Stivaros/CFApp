@@ -8,20 +8,21 @@ This repo hosts my CF course RoR app. It is an ecommerce store for SEO products.
 
 ### Refactoring
 
-- [ ] Separate the sticky header and footer CSS
-- [x] Put all page content into div containers
+- [ ] Separate the sticky header and footer CSS.
+- [x] Put all page content into div containers.
 
 ### Global
 
 - [x] Push nav items to right margin.
 - [ ] Update navigation link colour.
 - [ ] Footer links to Github and social media.
+- [ ] Remove alert and notice divs from all view pages (they are already in the application layout).
 
 ### Static Pages
 
 - [ ] Carousel text styling.
-- [ ] Better content for About page
-- [ ] Better content for Contact page
+- [ ] Better content for About page.
+- [ ] Better content for Contact page.
 
 ### Products
 
@@ -39,4 +40,4 @@ This repo hosts my CF course RoR app. It is an ecommerce store for SEO products.
 ### Users
 
 - [x] Use bootstrap to style login, signup and account edit forms.
-- [ ] Use bootstrap to style 'forgotten password' form and 'change password' form.
+- [x] Use bootstrap to style 'forgotten password' form and 'change password' form.
