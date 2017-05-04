@@ -3,7 +3,7 @@
 <p id="notice"><%= notice %></p>
 <div class="row">
   <div class="col-md-4">
-      <%= image_tag(@product.image_url, class: 'img-responsive') %>
+      <%= image_tag(@product.image_url, class: 'img-responsive thumbnail') %>
   </div>
   <div class="col-md-7 col-md-offset-1">
     <div class="row">
@@ -19,5 +19,24 @@
         <%= link_to 'Back', products_path, class: 'btn btn-danger' %>
       </div>
     </div>
+  </div>
+</div>
+<div class="row">
+  <div class="col-xs-12">
+    <h3>Reviews</h3>
+  </div>
+</div>
+<div class="row well">
+  <div class="col-md-6">
+    # Positive Comment from Highest Rated Comment
+  </div>
+  <div class="col-md-6">
+    # Negative Comment from Lowest Rated Comment
+  </div>
+  <div class="col-md-6">
+    <small># Comments</small>
+  </div>
+  <div class="col-md-6">
+    <small># Comments</small>
   </div>
 </div>
