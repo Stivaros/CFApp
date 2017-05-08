@@ -1,0 +1,28 @@
+<% if signed_in? %>
+  <h4>Add A Review:</h4>
+  <%= form_for([@product, @product.comments.build]) do |f| %>
+    <div class="row form-group">
+      <div class="col-md-6">
+        <p>
+          <%= f.label :positives, "Positive Comments" %>
+          <%= f.text_area :positives, class: 'form-control' %>
+        </p>
+      </div>
+      <div class="col-md-6">
+        <p>
+          <%= f.label :negatives, "Negative Comments" %>
+          <%= f.text_area :negatives, class: 'form-control' %>
+        </p>
+      </div>
+    </div>
+    <div class="row form-group">
+      <div class="col-xs-12">
+        <p>
+          <%= f.label :rating %>
+          <%= f.number_field, nil, within: 1...5, class: 'form-control' %>
+        </p>
+        <p>
+          <%= f.submit class: 'btn btn-primary' %>
+        </p>
+      </div>
+    </div>
