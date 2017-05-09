@@ -15,28 +15,20 @@
       <div class="col-md-12">
         <p><%= @product.tier %></p>
         <p class="product-price">£ <%= @product.price %></p><br>
+        <p>Average Rating: <div class="product-rated" data-score="<%= @product.average_rating %>"></div></p>
         <%= link_to 'Edit', edit_product_path(@product), class: 'btn btn-warning' %> |
         <%= link_to 'Back', products_path, class: 'btn btn-danger' %>
       </div>
     </div>
   </div>
 </div>
+
 <div class="row">
   <div class="col-xs-12">
     <h3>Reviews</h3>
   </div>
 </div>
-<div class="row well">
-  <div class="col-md-6">
-    # Positive Comment from Highest Rated Comment
-  </div>
-  <div class="col-md-6">
-    # Negative Comment from Lowest Rated Comment
-  </div>
-  <div class="col-md-6">
-    <small># Comments</small>
-  </div>
-  <div class="col-md-6">
-    <small># Comments</small>
-  </div>
+<div class="well">
+  <%= render 'new_comment' %>
+  <%= render 'comments' %>
 </div>

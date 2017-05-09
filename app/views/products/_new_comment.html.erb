@@ -18,11 +18,12 @@
     <div class="row form-group">
       <div class="col-xs-12">
         <p>
-          <%= f.label :rating %>
-          <%= f.number_field, nil, within: 1...5, class: 'form-control' %>
+          <div class="product-rating"></div>
         </p>
         <p>
           <%= f.submit class: 'btn btn-primary' %>
         </p>
       </div>
     </div>
+  <% end %>
+<% end %>
