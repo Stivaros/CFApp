@@ -1,0 +1,137 @@
+/* line 1, E:/Users/Stathis/Projects/Career Foundry/Module 3/CFapp/app/assets/stylesheets/orders.scss */
+.order-spacer {
+  margin-bottom: 1.5%;
+}
+/* line 4, E:/Users/Stathis/Projects/Career Foundry/Module 3/CFapp/app/assets/stylesheets/products.scss */
+.product-spacer {
+  margin-bottom: 1.5%;
+}
+
+/* line 8, E:/Users/Stathis/Projects/Career Foundry/Module 3/CFapp/app/assets/stylesheets/products.scss */
+.product-description {
+  font-size: 1.75em;
+  margin-bottom: 5%;
+}
+
+/* line 13, E:/Users/Stathis/Projects/Career Foundry/Module 3/CFapp/app/assets/stylesheets/products.scss */
+.product-price {
+  color: #616283;
+  font-size: 2em;
+}
+/* line 5, E:/Users/Stathis/Projects/Career Foundry/Module 3/CFapp/app/assets/stylesheets/static_pages.scss */
+.carousel-inner > .item > img {
+  height: 500px;
+  width: 100%;
+  object-fit: cover;
+}
+
+/* line 11, E:/Users/Stathis/Projects/Career Foundry/Module 3/CFapp/app/assets/stylesheets/static_pages.scss */
+.increase-margin-top {
+  margin-top: 5%;
+}
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+
+
+ */
+ 
+ /* Global Styles */
+
+ 
+ p {
+   color: #0E1116;
+   font-size: 1.5em;
+ }
+
+/* Sticky Header and Footer Styles */
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+body {
+  padding-top: 50px;
+  margin-bottom: 350px;
+}
+
+.footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  /* Set the fixed height of the footer here */
+  height: 300px;
+  background-color: #CB9CF2;
+  color: #616283;
+  clip-path: polygon(
+    0 3vw,
+    100% 0,
+    100% 100%,
+    0 100%
+  );
+}
+.footer-container {
+    padding-top: 6vw;
+}
+
+/* Bootstrap Navigation Overwrite */
+
+@media (min-width: 768px) {
+    .navbar .navbar-nav {
+        display: inline-block;
+        float: none;
+        vertical-align: top;
+    }
+
+    .navbar .navbar-collapse {
+        text-align: center;
+    }
+}
+
+.navbar {
+    border: none;
+}
+
+.navbar-default {
+    background-color: #CB9CF2;
+}
+
+/* Header */
+
+.header {
+  background-color: #CB9CF2;
+  clip-path: polygon(
+    0 0,
+    100% 0,
+    100% calc(100% - 3vw),
+    0 100%
+  );
+  min-height: 100px;
+  padding-bottom: 3vw;
+  margin-bottom: 3vw;
+}
+
+.header h1 {
+  color: #374A67;
+}
+
+.header p {
+  color: #616283;
+  font-size: 2em;
+}
+
+/* Footer */
+
+.footer p {
+  color: #374A67;
+  font-size: 1.25em;
+}
