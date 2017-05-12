@@ -41,3 +41,7 @@ This repo hosts my CF course RoR app. It is an ecommerce store for SEO products.
 
 - [x] Use bootstrap to style login, signup and account edit forms.
 - [x] Use bootstrap to style 'forgotten password' form and 'change password' form.
+
+## Reviews
+
+- [ ] Update star icon.
