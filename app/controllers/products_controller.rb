@@ -1,10 +1,6 @@
 class ProductsController < ApplicationController
   before_action :set_product, only: [:show, :edit, :update, :destroy]
 
-  def self.per_page
-    5
-  end
-
   # GET /products
   # GET /products.json
   def index
