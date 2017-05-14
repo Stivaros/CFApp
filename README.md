@@ -45,3 +45,4 @@ This repo hosts my CF course RoR app. It is an ecommerce store for SEO products.
 ## Reviews
 
 - [ ] Update star icon.
+- [ ] Border colours for positive and negative comments.
