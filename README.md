@@ -10,6 +10,7 @@ This repo hosts my CF course RoR app. It is an ecommerce store for SEO products.
 
 - [ ] Separate the sticky header and footer CSS.
 - [x] Put all page content into div containers.
+- [ ] Use like_operator in search code.
 
 ### Global
 
@@ -17,6 +18,7 @@ This repo hosts my CF course RoR app. It is an ecommerce store for SEO products.
 - [ ] Update navigation link colour.
 - [ ] Footer links to Github and social media.
 - [ ] Remove alert and notice divs from all view pages (they are already in the application layout).
+- [ ] Provide better error messages in instances of validation failure.
 
 ### Static Pages
 
@@ -42,7 +44,12 @@ This repo hosts my CF course RoR app. It is an ecommerce store for SEO products.
 - [x] Use bootstrap to style login, signup and account edit forms.
 - [x] Use bootstrap to style 'forgotten password' form and 'change password' form.
 
-## Reviews
+### Reviews
 
 - [ ] Update star icon.
 - [ ] Border colours for positive and negative comments.
+
+### Mailers
+
+- [ ] Send sign-up email.
+- [ ] Add name and sender's email address to contact form email.
