@@ -36,7 +36,7 @@ gem 'jbuilder', '~> 2.5'
 # Use devise for user authentication
 gem 'devise'
 # Specify bcrypt due to recurring bug
-gem 'bcrypt', platforms: :ruby
+gem 'bcrypt', git: 'https://github.com/codahale/bcrypt-ruby.git', :require => 'bcrypt'
 
 # Use CanCanCan for user authorisation
 gem 'cancancan', '~>1.10'
