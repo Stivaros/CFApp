@@ -11,6 +11,7 @@ class Ability
       can :manage, :all
     else
       can :read, :all
+      cannot :read, User
       can :manage, User, id: user.id
       can :create, Comment
       can :cu, Order, user_id: user.id
