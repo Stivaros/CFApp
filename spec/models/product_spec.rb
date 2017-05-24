@@ -5,6 +5,7 @@ describe Product do
   context "when the Product has comments" do
     before do
       @product = Product.create!(name: "Light Revamp")
+      @invalid_product = FactoryGirl.build(:product, name: nil)
       @user = FactoryGirl.create(:user)
       @comments = @product.comments.create!(rating: 1, user: @user, positives: "Good", negatives: "Worst")
       @comments = @product.comments.create!(rating: 3, user: @user, positives: "Good", negatives: "Bad")
@@ -16,7 +17,7 @@ describe Product do
     end
 
     it "when not valid" do
-      expect(Product.new(description: "Thorough check")).not_to be_valid
+      expect(@invalid_product).not_to be_valid
     end
 
   end

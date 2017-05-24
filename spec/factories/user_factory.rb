@@ -7,4 +7,5 @@ FactoryGirl.define do
     password "testpassword"
     admin false
   end
+  
 end
