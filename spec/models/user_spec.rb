@@ -5,7 +5,8 @@ describe User do
   context "not given valid email" do
 
     it "will not validate" do
-      expect(User.new(email:"test", password: "password")).not_to be_valid
+      @user = FactoryGirl.build(:user, email: "invalid_email")
+      expect(@user).not_to be_valid
     end
     
   end
