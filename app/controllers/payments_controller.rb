@@ -2,7 +2,12 @@ class PaymentsController < ApplicationController
 
   def create
     @product = Product.find(params[:product_id])
-    @user = current_user
+    if user_signed_in?
+      @user = current_user
+    else
+      @user = User.new(id: 99)
+    end
+    
     token = params[:stripeToken]
     begin
       charge = Stripe::Charge.create(
