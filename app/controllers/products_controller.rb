@@ -5,7 +5,11 @@ class ProductsController < ApplicationController
   # GET /products
   # GET /products.json
   def index
+    # Detect initiation of method
+    byebug
     if params[:q]
+      # Detect use of search function
+      byebug
       search_term = params[:q]
       @products = Product.search(search_term)
     else
@@ -16,6 +20,8 @@ class ProductsController < ApplicationController
   # GET /products/1
   # GET /products/1.json
   def show
+    # Detect initiation of method
+    byebug
     @comments = @product.comments.paginate(page: params[:page], per_page: 5)
   end
 
