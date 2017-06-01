@@ -9,8 +9,8 @@ class PaymentsController < ApplicationController
         amount: (@product.price * 100).to_i,
         currency: "gbp",
         source: token,
-        description: params[:stripeEmail],
-        receipt_email: @user.email
+        description: @product.description,
+        receipt_email: params[:stripeEmail]
       )
 
       if charge.paid
