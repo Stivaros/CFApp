@@ -5,7 +5,7 @@
   <div class="col-md-4">
     <div class="row">
       <div class="col-md-12">
-        <%= image_tag(@product.image_url, class: 'img-responsive thumbnail elevate-zoom', data: { zoom_image: @product.image_url } ) %>
+        <%= image_tag(@product.image_url, class: 'img-responsive thumbnail elevate-zoom', data: { zoom_image: image_url(@product.image_url) } ) %>
       </div>
     </div>
     <div class="row">
