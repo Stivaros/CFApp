@@ -15,3 +15,4 @@
 //= require_tree .
 //= require jquery.matchHeight.js
 //= require jquery.raty.js
+//= require jquery.elevateZoom-3.0.8.min.js
