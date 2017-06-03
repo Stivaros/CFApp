@@ -1,3 +1,15 @@
+  // Script for Raty
+  var refreshRating = function() {
+    $('.product-rating').raty( {path: '/assets', scoreName: 'comment[rating]' });
+    $('.product-rated').raty({ path: '/assets',
+      readOnly: true,
+      score: function() {
+        return $(this).attr('data-score');
+      }
+    });
+  };
+  // End Raty
+
 $(document).ready(function(){
 
   // Script for elevateZoom
@@ -8,14 +20,6 @@ $(document).ready(function(){
   });
   // End elevateZoom
 
-  // Script for Raty
-  $('.product-rating').raty( {path: '/assets', scoreName: 'comment[rating]' });
-  $('.product-rated').raty({ path: '/assets',
-    readOnly: true,
-    score: function() {
-      return $(this).attr('data-score');
-    }
-  });
-  // End Raty
-
+  // Call Raty
+  refreshRating();
 });
