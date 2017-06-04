@@ -50,6 +50,12 @@ gem 'bootstrap-will_paginate'
 # Use Stripe for payment processing
 gem 'stripe'
 
+# Use dalli for memcached caching
+gem 'dalli'
+
+# Enable connection pooling
+gem 'connection_pool'
+
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platform: :mri
