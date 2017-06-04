@@ -5,4 +5,6 @@
   <%= link_to 'New Product', new_product_path, class: 'btn btn-primary btn-lg pull-right' %>
 </div>
 
-<%= render 'product' %>
+<% cache(cache_key_for_products) do %>
+  <%= render 'product' %>
+<% end %>
