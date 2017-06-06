@@ -1,48 +1,49 @@
 <% content_for :page_header, @product.name.capitalize %>
 <% content_for :page_description, "Product information for #{@product.name}" %>
 <p id="notice"><%= notice %></p>
-<% cache @product do %>
-  <div class="row">
-    <div class="col-md-4">
-      <div class="row">
-        <div class="col-md-12">
-          <%= image_tag(@product.image_url, class: 'img-responsive thumbnail elevate-zoom', data: { zoom_image: image_url(@product.image_url) } ) %>
-        </div>
-      </div>
-      <div class="row">
-        <div class="col-md-12 text-center">
-          <p>Average Rating: <div id="average-rating" class="product-rated" data-score="<%= @product.average_rating %>"></div></p>
-          <%= link_to 'Edit', edit_product_path(@product), class: 'btn btn-warning' %> |
-          <%= link_to 'Back', products_path, class: 'btn btn-danger' %>
-        </div>
+<div class="row">
+  <div class="col-md-4">
+    <div class="row">
+      <div class="col-md-12">
+        <%= image_tag(@product.image_url, class: 'img-responsive thumbnail elevate-zoom', data: { zoom_image: image_url(@product.image_url) } ) %>
       </div>
     </div>
-    <div class="col-md-7 col-md-offset-1">
-      <div class="row">
-        <div class="col-md-12">
-          <p class="product-description"><%= @product.description %></p>
-        </div>
-      </div>
-      <div class="row">
-        <div class="col-md-12">
-          <p><%= @product.tier %></p>
-          <p class="product-price">£ <%= @product.price %></p>
-          <%= form_tag "/payments/create" do %>
-            <%= render partial: "shared/stripe_checkout_button" %>
-          <% end %>
-        </div>
+    <div class="row">
+      <div class="col-md-12 text-center">
+        <p>Average Rating: <div id="average-rating" class="product-rated" data-score="<%= @product.average_rating %>"></div></p>
+        <%= link_to 'Edit', edit_product_path(@product), class: 'btn btn-warning' %> |
+        <%= link_to 'Back', products_path, class: 'btn btn-danger' %>
       </div>
     </div>
   </div>
+  <div class="col-md-7 col-md-offset-1">
+    <div class="row">
+      <div class="col-md-12">
+        <p class="product-description"><%= @product.description %></p>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-12">
+        <p><%= @product.tier %></p>
+        <p class="product-price">£ <%= @product.price %></p>
+        <%= form_tag "/payments/create" do %>
+          <%= render partial: "shared/stripe_checkout_button" %>
+        <% end %>
+        <% if signed_in? && current_user.admin? %>
+          <p>Views: <span class="badge"><%= @product.views %></span></p>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</div>
 
-  <div class="row">
-    <div class="col-xs-12">
-      <h3>Reviews</h3>
-    </div>
+<div class="row">
+  <div class="col-xs-12">
+    <h3>Reviews</h3>
   </div>
-  <div class="well">
-    <%= render 'new_comment' %>
-    <%= render 'comments' %>
-    <%= will_paginate @comments, class: 'text-center' %>
-  </div>
-<% end %>
+</div>
+<div class="well">
+  <%= render 'new_comment' %>
+  <%= render 'comments' %>
+  <%= will_paginate @comments, class: 'text-center' %>
+</div>
