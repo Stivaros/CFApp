@@ -29,6 +29,9 @@
         <%= form_tag "/payments/create" do %>
           <%= render partial: "shared/stripe_checkout_button" %>
         <% end %>
+        <% if signed_in? && current_user.admin? %>
+          <p>Views: <span class="badge"><%= @product.views %></span></p>
+        <% end %>
       </div>
     </div>
   </div>
