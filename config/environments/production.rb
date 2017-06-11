@@ -97,4 +97,8 @@ Rails.application.configure do
 
   # New flag to show raty stars on Heroku
   config.serve_static_assets = true
+
+  # Configure WebSockets for production
+  config.web_socket_server_url = "wss://stivaroscfapp.herokuapp.com/cable"
+  config.action_cable.allowed_request_origins = ['https://stivaroscfapp.herokuapp.com', 'http://stivaroscfapp.herokuapp.com']
 end
