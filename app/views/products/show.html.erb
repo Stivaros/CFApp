@@ -43,8 +43,8 @@
   </div>
 </div>
 <div class="well">
-  <%= render 'new_comment' %>
   <div class="alert alert-info" style="display:none" role="alert">A new comment was posted!</div>
+  <%= render 'new_comment' %>
   <%= render 'comments' %>
   <%= will_paginate @comments, class: 'text-center' %>
 </div>
