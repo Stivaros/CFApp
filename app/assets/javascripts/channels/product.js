@@ -9,6 +9,7 @@ App.product = App.cable.subscriptions.create("ProductChannel", {
 
   received: function(data) {
     // Called when there's incoming data on the websocket for this channel
+    console.log("Received function checkpoint");
     $(".alert.alert-info").show();
   }
 });
