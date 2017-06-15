@@ -9,10 +9,12 @@ App.product = App.cable.subscriptions.create("ProductChannel", {
 
   received: function(data) {
     // Called when there's incoming data on the websocket for this channel
+    console.log("received checkpoint, product_id: " + data);
     $(".alert.alert-info").show();
   },
 
   listen_to_comments: function() {
+    console.log("listen_to_coments checkpoint");
     return this.perform('listen', {
       product_id: $("[data-product-id]").data("product-id")
     });
@@ -20,5 +22,6 @@ App.product = App.cable.subscriptions.create("ProductChannel", {
 });
 
 $(document).on('turbolinks:load', function() {
+  console.log("turbolinks:load checkpoint");
   App.product.listen_to_comments();
 });
