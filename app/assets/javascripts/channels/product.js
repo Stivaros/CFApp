@@ -9,8 +9,10 @@ App.product = App.cable.subscriptions.create("ProductChannel", {
 
   received: function(data) {
     // Called when there's incoming data on the websocket for this channel
-    console.log("received checkpoint, product_id: " + data);
     $(".alert.alert-info").show();
+    $('.product-reviews').prepend(data.comment);
+    $("#average-rating").attr('data-score', data.average_rating);
+    refreshRating();
   },
 
   listen_to_comments: function() {
