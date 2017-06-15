@@ -10,7 +10,7 @@
   };
   // End Raty
 
-$(document).ready(function(){
+$(document).on('turbolinks:load', function() {
 
   // Script for elevateZoom
   $('.elevate-zoom').elevateZoom({

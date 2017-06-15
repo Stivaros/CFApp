@@ -1,7 +1,7 @@
 <% content_for :page_header, @product.name.capitalize %>
 <% content_for :page_description, "Product information for #{@product.name}" %>
 <p id="notice"><%= notice %></p>
-<div class="row">
+<div class="row" data-product-id="<%= @product.id %>">
   <div class="col-md-4">
     <div class="row">
       <div class="col-md-12">
