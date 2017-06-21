@@ -1,6 +1,6 @@
 App.product = App.cable.subscriptions.create("ProductChannel", {
   connected: function() {
-    // Called when the subscription is ready for use on the server
+    App.product.listen_to_comments();
   },
 
   disconnected: function() {
@@ -16,7 +16,6 @@ App.product = App.cable.subscriptions.create("ProductChannel", {
   },
 
   listen_to_comments: function() {
-    console.log("listen_to_coments checkpoint");
     return this.perform('listen', {
       product_id: $("[data-product-id]").data("product-id")
     });
@@ -24,6 +23,5 @@ App.product = App.cable.subscriptions.create("ProductChannel", {
 });
 
 $(document).on('turbolinks:load', function() {
-  console.log("turbolinks:load checkpoint");
   App.product.listen_to_comments();
 });
