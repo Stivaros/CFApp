@@ -1,16 +1,58 @@
 // Place all the styles related to the products controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+// Index View
+
+@media (min-width: 992px) {
+  .row.equal {
+    display: flex;
+    flex-wrap: wrap;
+    min-height: 500px;
+  }
+}
+
 .product-spacer {
   margin-bottom: 1.5%;
 }
 
-.product-description {
-  font-size: 1.75em;
-  margin-bottom: 5%;
+.col-md-4.item:hover {
+  background-color: #eef;
+}
+
+.product-img {
+  height: 40%;
+  margin: 5% auto;
+}
+
+.product-name {
+  margin-top: 5%;
+  text-align: center;
+}
+
+.product-index-description {
+  padding-top: 5%;
+  height: 25%;
+  color: #616283;
 }
 
 .product-price {
   color: #616283;
-  font-size: 2em;
+  text-align: right;
+}
+
+.product-price-column {
+  border-right: 1px solid  #CB9CF2;
+}
+
+.product-navigation-buttons {
+  padding-top: 1.5%;
+  text-align: center;
+}
+
+// Show View
+
+.product-description {
+  font-size: 1.75em;
+  margin-bottom: 5%;
 }
