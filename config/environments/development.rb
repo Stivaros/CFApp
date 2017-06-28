@@ -54,4 +54,7 @@ Rails.application.configure do
   
   # Define default url option as per Devise installation recommendation
   config.action_mailer.default_url_options = { :host => 'localhost:3000' }
+
+  # Configure Rails to generate JS files instead of CoffeeScript
+  config.app_generators.javascript_engine = :javascript
 end

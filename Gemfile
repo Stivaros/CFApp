@@ -47,6 +47,18 @@ gem 'will_paginate', '~>3.1.0'
 # Use Bootstrap style for pagination
 gem 'bootstrap-will_paginate'
 
+# Use Stripe for payment processing
+gem 'stripe'
+
+# Use dalli for memcached caching
+gem 'dalli'
+
+# Enable connection pooling
+gem 'connection_pool'
+
+# Use redis for performance
+gem 'redis-rails'
+
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platform: :mri
@@ -63,6 +75,8 @@ end
 group :development do
   # Access an IRB console on exception pages or by using <%= console %> anywhere in the code.
   gem 'web-console', '>= 3.3.0'
+  # Use Brakeman for security scanning
+  gem "brakeman", :require => false
 end
 
 group :production do

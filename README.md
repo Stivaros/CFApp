@@ -2,54 +2,18 @@
 
 ## What is this?
 
-This repo hosts my CF course RoR app. It is an ecommerce store for SEO products.
+This repo hosts my CF course RoR app. It is a portfolio piece, showcasing an ecommerce store for SEO products.
+
+The app is hosted on Heroku at https://stivaroscfapp.herokuapp.com.
+
+## Languages Used
+
+This is predominantly a RoR app.
+
+JavaScript and jQuery have been used for aspects of the front-end. CoffeeScript may be used if the code is refactored in future.
+
+CSS (with some SASS) has been used for style, predominantly built upon Bootstrap.
 
 ## Issues & WIP
 
-### Refactoring
-
-- [ ] Separate the sticky header and footer CSS.
-- [x] Put all page content into div containers.
-- [ ] Use like_operator in search code.
-
-### Global
-
-- [x] Push nav items to right margin.
-- [ ] Update navigation link colour.
-- [ ] Footer links to Github and social media.
-- [ ] Remove alert and notice divs from all view pages (they are already in the application layout).
-- [ ] Provide better error messages in instances of validation failure.
-
-### Static Pages
-
-- [ ] Carousel text styling.
-- [ ] Better content for About page.
-- [ ] Better content for Contact page.
-
-### Products
-
-- [x] Custom style for price on Products page.
-- [ ] Product edit page styling and title.
-- [ ] Line break between "Create Product" and "Back" on new product view.
-
-
-### Orders
-
-- [x] Move "New Order" button to top right, similar to Products index view.
-- [x] Line break between "Create Order" and "Back" buttons.
-- [x] Create product dropdown in the order menu using "select".
-
-### Users
-
-- [x] Use bootstrap to style login, signup and account edit forms.
-- [x] Use bootstrap to style 'forgotten password' form and 'change password' form.
-
-### Reviews
-
-- [ ] Update star icon.
-- [ ] Border colours for positive and negative comments.
-
-### Mailers
-
-- [ ] Send sign-up email.
-- [ ] Add name and sender's email address to contact form email.
+See [GitHub Issues](https://github.com/Stivaros/CFApp/issues).
