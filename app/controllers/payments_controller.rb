@@ -25,6 +25,7 @@ class PaymentsController < ApplicationController
           total: @product.price
         )
         flash[:notice] = "Thank you for purchasing #{@product.name}"
+        UserMailer.purchase_confirmation(@email, @product.name, @product.description, @product.price).deliver_now
       end
     rescue Stripe::CardError => e
       body = e.json_body
