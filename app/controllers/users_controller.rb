@@ -6,7 +6,13 @@ class UsersController < ApplicationController
   # GET /users
   # GET /users.json
   def index
-    @users = User.all
+    if current_user.admin?
+      @users = User.all
+    else
+      flash[:notice] = "You do not have access to this page"
+      redirect_back(fallback_location: root_path)
+      return
+    end
   end
 
   # GET /users/1
