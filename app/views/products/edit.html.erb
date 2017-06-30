@@ -1,6 +1,7 @@
-<h1>Editing Product</h1>
+<% content_for :page_header, "Edit Product" %>
+<% content_for :page_description, @product.name.titlecase %>
 
 <%= render 'form', product: @product %>
-
+<br>
 <%= link_to 'Show', @product %> |
 <%= link_to 'Back', products_path %>
