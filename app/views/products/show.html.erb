@@ -11,8 +11,10 @@
     <div class="row">
       <div class="col-md-12 text-center">
         <p>Average Rating: <div id="average-rating" class="product-rated" data-score="<%= @product.average_rating %>"></div></p>
-        <%= link_to 'Edit', edit_product_path(@product), class: 'btn btn-warning' %> |
-        <%= link_to 'Back', products_path, class: 'btn btn-danger' %>
+          <% if signed_in? && current_user.admin? %>
+            <%= link_to 'Edit', edit_product_path(@product), class: 'btn btn-warning' %> |
+          <% end %>
+          <%= link_to 'Back', products_path, class: 'btn btn-danger' %>
       </div>
     </div>
   </div>
@@ -23,9 +25,9 @@
       </div>
     </div>
     <div class="row">
-      <div class="col-md-12">
-        <p><%= @product.tier %></p>
-        <p class="product-price">£ <%= @product.price %></p>
+      <div class="col-md-12 text-center">
+        <p class="product-show-price">£ <%= @product.price %> <span class="product-show-divider">|</span> <%= @product.tier %></p>
+
         <%= form_tag "/payments/create" do %>
           <%= render partial: "shared/stripe_checkout_button" %>
         <% end %>
